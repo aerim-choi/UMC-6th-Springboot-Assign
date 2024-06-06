@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 import umc.apiPayload.ApiResponse;
 import umc.coverter.TempConverter;
-import umc.service.TempQueryService;
+import umc.service.TempService.TempQueryService;
 import umc.web.dto.TempResponse;
 
 @RestController
