@@ -18,7 +18,6 @@ import umc.web.dto.ReviewRequestDTO;
 @Service
 @RequiredArgsConstructor
 @Transactional(readOnly = true)
-
 public class ReviewCommandServiceImpl implements ReviewCommandService {
 
     private final ReviewRepository reviewRepository;
