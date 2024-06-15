@@ -8,13 +8,14 @@ import umc.repository.StoreRepository;
 import umc.web.dto.ReviewRequestDTO;
 import umc.web.dto.ReviewResponseDTO;
 
+import java.time.LocalDate;
 import java.time.LocalDateTime;
 
 public class ReviewConverter {
     public static ReviewResponseDTO.createReviewResultDTO toReviewResultDTO(Review review){
         return ReviewResponseDTO.createReviewResultDTO.builder()
                 .reviewId(review.getId())
-                .createAt(LocalDateTime.now())
+                .createAt(LocalDate.now())
                 .build();
     }
     public static Review toReview(ReviewRequestDTO.createReviewDto request, Member member, Store store){
