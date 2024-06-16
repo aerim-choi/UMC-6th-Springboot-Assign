@@ -20,7 +20,9 @@ public class MemberMission extends BaseEntity {
     private Long id;
 
     @Enumerated(EnumType.STRING)
-    private MissionStatus status;
+
+    @Builder.Default
+    private MissionStatus status = MissionStatus.PROGRESS;
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "member_id")

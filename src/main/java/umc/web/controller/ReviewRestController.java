@@ -18,7 +18,7 @@ import umc.web.dto.ReviewResponseDTO;
 @RequestMapping("/reviews")
 public class ReviewRestController {
     private final ReviewCommandService reviewCommandService;
-    @PostMapping
+    @PostMapping("/")
     public ApiResponse<ReviewResponseDTO.createReviewResultDTO> createReview(@RequestBody @Valid ReviewRequestDTO.createReviewDto request) {
         Review review = reviewCommandService.createReview(request);
         return ApiResponse.onSuccess(ReviewConverter.toReviewResultDTO(review));
