@@ -7,13 +7,12 @@ import umc.validation.annotation.ExistStore;
 public class ReviewRequestDTO {
     @Getter
     public static class createReviewDto{
-        @NotBlank
         Long memberId;
         @ExistStore
         Long storeId;
         @NotBlank
         String body;
         @Min(1) @Max(5)
-        int score;
+        Float score;
     }
 }

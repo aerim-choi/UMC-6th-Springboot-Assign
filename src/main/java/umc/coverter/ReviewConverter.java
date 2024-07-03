@@ -15,7 +15,7 @@ public class ReviewConverter {
     public static ReviewResponseDTO.createReviewResultDTO toReviewResultDTO(Review review){
         return ReviewResponseDTO.createReviewResultDTO.builder()
                 .reviewId(review.getId())
-                .createAt(LocalDate.now())
+                .createAt(LocalDateTime.now())
                 .build();
     }
     public static Review toReview(ReviewRequestDTO.createReviewDto request, Member member, Store store){

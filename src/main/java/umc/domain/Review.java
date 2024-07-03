@@ -17,7 +17,7 @@ public class Review extends BaseEntity {
 
     private String body;
 
-    private int score;
+    private Float score;
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "member_id")
