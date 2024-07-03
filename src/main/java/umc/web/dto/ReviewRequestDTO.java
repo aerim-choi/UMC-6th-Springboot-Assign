@@ -7,6 +7,7 @@ import umc.validation.annotation.ExistStore;
 public class ReviewRequestDTO {
     @Getter
     public static class createReviewDto{
+        @NotBlank
         Long memberId;
         @ExistStore
         Long storeId;
