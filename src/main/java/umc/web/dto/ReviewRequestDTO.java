@@ -13,6 +13,6 @@ public class ReviewRequestDTO {
         @NotBlank
         String body;
         @Min(1) @Max(5)
-        int score;
+        Float score;
     }
 }
